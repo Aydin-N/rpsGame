@@ -10,44 +10,44 @@ let compScore = parseInt(document.querySelector("#comp-score").textContent)
 resultButton.addEventListener("click", () => {
     yourScore = 0
     document.querySelector("#your-score").textContent = yourScore
-    yourHandImg.src = "photos/your rock.jpg"
+    yourHandImg.src = "your rock.jpg"
     compScore = 0
     document.querySelector("#comp-score").textContent = compScore
     resultWindow.style.display = "none"
-    compHandImg.src = "photos/comp rock.jpg"
+    compHandImg.src = "comp rock.jpg"
 })
 
 btn.forEach((each) => each.addEventListener("click", () => {
     let yourHand
     let compHand
     // Your Hand
-    yourHandImg.src = "photos/your rock.jpg"
+    yourHandImg.src = "your rock.jpg"
     yourHandImg.classList.toggle("your-hand-active")
-    compHandImg.src = "photos/comp rock.jpg"
+    compHandImg.src = "comp rock.jpg"
     compHandImg.classList.toggle("comp-hand-active")
     const animation = setTimeout(() => {
         yourHandImg.classList.toggle("your-hand-active")
         compHandImg.classList.toggle("comp-hand-active")
         if (each.textContent.toLowerCase() === "rock") {
-            yourHandImg.src = "photos/your rock.jpg"
+            yourHandImg.src = "your rock.jpg"
             yourHand = "rock"
         } else if (each.textContent.toLowerCase() === "paper") {
-            yourHandImg.src = "photos/your paper.jpg"
+            yourHandImg.src = "your paper.jpg"
             yourHand = "paper"
         } else if (each.textContent.toLowerCase() === "scissors") {
-            yourHandImg.src = "photos/your scissors.jpg"
+            yourHandImg.src = "your scissors.jpg"
             yourHand = "scissors"
         }
         // Comp Hand
         let num = Math.floor(Math.random()*3)
         if (num === 0) {
-            compHandImg.src = "photos/comp rock.jpg"
+            compHandImg.src = "comp rock.jpg"
             compHand = "rock"
         } else if (num === 1) {
-            compHandImg.src = "photos/comp paper.jpg"
+            compHandImg.src = "comp paper.jpg"
             compHand = "paper"
         } else if (num === 2) {
-            compHandImg.src = "photos/comp scissors.jpg"
+            compHandImg.src = "comp scissors.jpg"
             compHand = "scissors"
         }
         //Checking Hands
